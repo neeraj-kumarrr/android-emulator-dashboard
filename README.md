@@ -1,4 +1,34 @@
 # AdStacks Media - Python Intern Assignment
+##How to run Script##
+=================================
+# 1. Navigate to project directory
+cd Adstacks_project
+
+# 2. Start Django server (in first terminal)
+python manage.py runserver
+
+# 3. Run the Android simulator (in second terminal)
+python manage.py shell
+>>> from adstacks.android_simulator import AndroidSimulator
+>>> simulator = AndroidSimulator()
+>>> simulator.start_emulator()  # Starts virtual device
+>>> exit()  # To exit shell
+##how to install app##
+===================================
+# In Django shell or script:
+simulator.install_app("/path/to/your/app.apk")
+
+# Example with test APK:
+simulator.install_app("sample.apk")  # Place APK in project root first
+
+# Expected output:
+"Installing sample.apk..."
+"Installation successful"
+
+##system information logged##
+======================================
+system_info = simulator.get_system_info()
+print(system_info)
 
 # Project Overview
 A Django-based backend system with Android emulator integration that demonstrates:
