@@ -29,6 +29,21 @@ class AndroidSimulator:
         
     def get_info(self ):
         return self.system_info
-    
+
+if __name__ =="__main__":
+    simulator = AndroidSimulator()
+
+if simulator.start_emulator():
+    print("emulator started successfully")
+
+apk_path = "/path/to/app.apk"
+if simulator.install_app(apk_path):
+    print(f"app intalled successfully {apk_path}")
+
+info = simulator.get_info()
+print(f"emulator info: {info}")
+
+
+
 
 

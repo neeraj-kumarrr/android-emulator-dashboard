@@ -2,7 +2,7 @@ import requests
 import json
 
 class AndroidNetwork:
-    def __init__(self , base_url = "https://127.0.0.1:8000/api/"):
+    def __init__(self , base_url = "http://127.0.0.1:8000/api/"):
         self.base_url = base_url
 
     def send_data(self , device_data):
